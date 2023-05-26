@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">LATITUDE</th>
+
+    </tr>
+  </thead>
+  <tbody>
+      <% if (response) { %> <% response.forEach(function(a){ %>
+          <tr>
+              <td ><%= a.student_id %></td>
+              <td ><%= a.name %></td>
+              <td ><%= a.last_name %></td>
+
+                    </tr>
+            <% }) %> <% } %>
+  </tbody>
+</table>
