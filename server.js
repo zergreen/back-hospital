@@ -16,6 +16,9 @@ server.use(helmet());
 server.use(express.json());
 server.use(routes);
 
+const department = require('./api/hospital-department')
+server.use('/department', department)
+
 server.listen(server.get("port"), () => {
     console.log("Server started on port " + server.get("port"));
     console.log(`[HOST] http://localhost:3000/`);

@@ -91,6 +91,7 @@ class Plugin {
     return res.status(200).send(jsonData);
   }
 }
+
 module.exports = {
   Plugin,
 };

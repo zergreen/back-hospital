@@ -9,15 +9,12 @@ router.get("/", function (req, res) {
 
 router.get("/testjson", new Endpoint().getApiEndpoint);
 
-router.post("/department", new Endpoint().addDepartment);
+router.post("/login", new Endpoint().loginEndpoint);
 
-router.get("/department", new Endpoint().getAllDepartmentEndpoint);
+router.post("/register", new Endpoint().registerEndpoint);
 
-router.get("/department/:id", new Endpoint().getDepartmentByIdEndpoint);
+router.get("/profile" ,new Endpoint().profileEndpoint);
 
-router.put("/department/:id", new Endpoint().updateDepartmentByIdEndpoint);
-
-router.delete("/department/:id", new Endpoint().deleteDepartmentByIdEndpoint);
-
+router.post("/forgetpwd", new Endpoint().forgetpwdEndpoint);
 
 module.exports = router;

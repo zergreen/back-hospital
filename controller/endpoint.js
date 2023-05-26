@@ -13,6 +13,10 @@ class Endpoint {
   addDepartment = (req, res) => {
     // this.dataDepartment.Department_ID = req.body.Department_ID;
     // this.dataDepartment.Department_Name = req.body.Department_Name;
+    console.log(req.body.Department_ID);
+    if(req.body.Department_ID === "" || req.body.Department_Name === ""){
+      return res.status(301).json({ error: 'Some field is empthy'});
+    }
     new Logic().addDepartmentLogic(req, res);
   }
 
